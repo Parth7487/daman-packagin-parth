@@ -1,4 +1,5 @@
 
+import React from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone } from "lucide-react";
 
@@ -33,31 +34,31 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/33086455-9827-4f07-ba92-208b1880b389.png" 
                 alt="Daman Packaging Logo" 
-                className="h-10 w-auto mr-2"
+                className="h-16 w-auto mr-3" // Increased size from h-10 to h-16
               />
-              <span>Daman Packaging</span>
+              <span className="text-xl md:text-2xl lg:text-3xl">Daman Packaging</span>
             </Link>
           </div>
           
-          <nav>
-            <ul className="flex flex-wrap justify-center space-x-1 md:space-x-8">
+          <nav className="w-full md:w-auto">
+            <ul className="flex flex-wrap justify-center space-x-2 md:space-x-8 text-base md:text-lg">
               <li className="py-2">
-                <Link to="/" className="px-3 py-2 hover:text-gray-200">
+                <Link to="/" className="px-3 py-2 hover:text-gray-200 font-medium">
                   Home
                 </Link>
               </li>
               <li className="py-2">
-                <Link to="/products" className="px-3 py-2 hover:text-gray-200">
+                <Link to="/products" className="px-3 py-2 hover:text-gray-200 font-medium">
                   Products
                 </Link>
               </li>
               <li className="py-2">
-                <Link to="/about" className="px-3 py-2 hover:text-gray-200">
+                <Link to="/about" className="px-3 py-2 hover:text-gray-200 font-medium">
                   About Us
                 </Link>
               </li>
               <li className="py-2">
-                <Link to="/contact" className="px-3 py-2 hover:text-gray-200">
+                <Link to="/contact" className="px-3 py-2 hover:text-gray-200 font-medium">
                   Contact Us
                 </Link>
               </li>

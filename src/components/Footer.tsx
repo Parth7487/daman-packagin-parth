@@ -1,4 +1,5 @@
 
+import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -6,9 +7,16 @@ const Footer = () => {
     <footer className="bg-[#265186] text-white py-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Daman Packaging</h3>
-            <p className="mb-4">
+          <div className="flex flex-col items-center md:items-start">
+            <div className="mb-4 flex justify-center md:justify-start">
+              <img 
+                src="/lovable-uploads/33086455-9827-4f07-ba92-208b1880b389.png" 
+                alt="Daman Packaging Logo" 
+                className="h-24 w-auto"
+              />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Daman Packaging</h3>
+            <p className="mb-4 text-center md:text-left">
               Manufacturer of Exclusively Virgin Quality HM-HDPE Jerry Cans & Open Top Drums
             </p>
             <p className="text-sm">

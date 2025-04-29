@@ -1,10 +1,47 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from "@/components/ui/table";
 
 const Products = () => {
+  const productItems = [
+    {
+      title: "JERRYCAN 5",
+      specs: [
+        { label: "Useable Capacity (LTR.)", value: "5" },
+        { label: "Height (mm)", value: "280" },
+        { label: "Length (mm)", value: "150" },
+        { label: "Width (mm)", value: "180" },
+        { label: "Weight Range (gms)", value: "180 / 320" }
+      ],
+      imageUrl: "/lovable-uploads/8258c0d5-32dc-46e1-9fe6-f2e2ed03574a.png"
+    },
+    {
+      title: "JERRYCAN 30",
+      specs: [
+        { label: "Brimful Capacity (LTR.)", value: "34" },
+        { label: "Useable Capacity (LTR.)", value: "30" },
+        { label: "Height (mm)", value: "480" },
+        { label: "Length (mm)", value: "385" },
+        { label: "Width (mm)", value: "235" },
+        { label: "Weight Range (kgs)", value: "1.8/2.0/--" }
+      ],
+      imageUrl: "/lovable-uploads/427ee0a3-e181-4ace-8f72-965f5b9da7ef.png"
+    },
+    {
+      title: "CROSS NECK JERRYCAN 35",
+      specs: [
+        { label: "Brimful Capacity (LTR.)", value: "39" },
+        { label: "Useable Capacity (LTR.)", value: "35" },
+        { label: "Height (mm)", value: "500" },
+        { label: "Length (mm)", value: "385" },
+        { label: "Width (mm)", value: "235" },
+        { label: "Weight Range (kgs)", value: "1.8/2.0/--" }
+      ],
+      imageUrl: "/lovable-uploads/1052e5a3-0896-4afe-bcb6-eb77041f06d0.png"
+    }
+  ];
+
   const productCategories = [
     {
       title: "HDPE Narrow Mouth Bottle - Rectangular",
@@ -66,6 +103,40 @@ const Products = () => {
         <h1 className="text-3xl font-bold text-white mb-8 text-center bg-black bg-opacity-50 p-4 rounded">Our Products</h1>
       </div>
       
+      {/* Featured Products with larger images and detailed specs */}
+      <div className="mb-16">
+        <h2 className="text-2xl font-semibold text-[#265186] mb-8 text-center">Featured Products</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {productItems.map((product, idx) => (
+            <div key={idx} className="border rounded-lg overflow-hidden shadow-lg bg-white">
+              <div className="h-64 bg-white flex items-center justify-center p-4 border-b">
+                <img
+                  src={product.imageUrl}
+                  alt={product.title}
+                  className="max-h-full max-w-full object-contain"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://placehold.co/400x400/265186/FFFFFF?text=Product+Image";
+                  }}
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#265186] mb-4">{product.title}</h3>
+                <div className="space-y-2">
+                  {product.specs.map((spec, specIdx) => (
+                    <p key={specIdx} className="flex justify-between">
+                      <span className="font-medium">{spec.label}</span>
+                      <span className="text-gray-700">{spec.value}</span>
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      {/* Other Product Categories */}
       <div className="flex flex-col gap-16">
         {productCategories.map((category, idx) => (
           <section key={idx} className="border-b border-gray-200 pb-12 last:border-b-0">
