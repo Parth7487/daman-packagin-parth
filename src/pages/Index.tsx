@@ -1,123 +1,118 @@
 
+import React from "react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen bg-[#fff8e1]" style={{ 
-      backgroundImage: "url('https://i.imgur.com/qV3RlM3.png')", 
-      backgroundRepeat: "repeat",
-      backgroundSize: "200px" 
-    }}>
-      {/* Header */}
-      <div className="bg-[#fff8e1] pt-4 px-4">
-        <div className="container mx-auto">
-          <div className="flex flex-col">
-            <h1 className="text-3xl md:text-4xl font-serif italic font-bold text-black">
-              Daman Packaging
-            </h1>
-            <div className="flex items-center mt-1">
-              <span className="text-sm">An</span>
-              <span className="text-sm font-bold ml-1 mr-1">ISO 9001:2008 Certified</span>
-              <span className="text-sm">Organisation</span>
-            </div>
-            <div className="text-right text-sm mt-[-20px]">
-              <div>E: <a href="mailto:rpcipl@gmail.com" className="hover:underline">rpcipl@gmail.com</a> | T: +91 22 25836346 | Mumbai, INDIA</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Navigation */}
-      <div className="mt-2">
-        <nav className="border-t border-b">
-          <ul className="flex flex-wrap text-center">
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/" className="block">Home</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/about" className="block">About Us</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/certifications" className="block">Certifications</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/products" className="block">Products</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/features" className="block">Features</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/chemical-resistance" className="block">Chemical Resistance Chart</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/enquiry" className="block">Enquiry</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/careers" className="block">Careers</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 hover:bg-[#a67a0a]"><Link to="/contact" className="block">Contact Us</Link></li>
-          </ul>
-        </nav>
-      </div>
-
-      {/* Banner Image */}
-      <div className="w-full bg-gradient-to-r from-[#e6a28d] to-[#f6e6b4] overflow-hidden">
-        <img 
-          src="/lovable-uploads/ed702fe7-d39e-441b-9a59-33d783305e2f.png" 
-          alt="Plastic Containers" 
-          className="w-full"
-        />
-      </div>
-
-      {/* Tagline Banner */}
-      <div className="bg-[#505a6c] text-white py-2 text-center text-lg md:text-xl">
-        Manufacturer of Exclusively Virgin Quality HM-HDPE Jerry Cans & Open Top Drums
-      </div>
-
-      {/* Main Content */}
-      <div className="flex flex-col md:flex-row">
-        {/* Left Sidebar */}
-        <div className="w-full md:w-[30%] bg-[#fff8e1] p-4">
-          <div className="mb-6">
-            <div className="flex items-center mb-2">
-              <div className="h-4 w-4 bg-red-600 mr-2 flex items-center justify-center text-white text-xs">×</div>
-              <h2 className="text-lg font-bold uppercase">PRODUCTS</h2>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-bold uppercase mb-1">NARROW MOUTH JERRYCANS</h3>
-              <p className="mb-1">Product range:</p>
-              <p className="mb-4">5 ltrs to 120 ltrs capacity.</p>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-bold uppercase mb-1">OPEN TOP ROUND DRUMS</h3>
-              <p className="mb-1">Product range:</p>
-              <p className="mb-4">10 kgs to 200 kgs capacity.</p>
-            </div>
-
-            <div className="mb-6">
-              <h3 className="font-bold uppercase mb-1">NARROW MOUTH ROUND DRUMS</h3>
-              <p className="mb-1">Product range:</p>
-              <p>25 ltrs to 120 ltrs capacity.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Content */}
-        <div className="w-full md:w-[70%] bg-white p-4">
-          <h2 className="text-2xl font-bold text-[#b8392e] mb-4">Welcome to Daman Packaging</h2>
-          
-          <p className="mb-4">
-            In a span of three decades, <strong>Daman Packaging</strong> has grown to become one of the leading manufacturers of plastic containers in India. Our first production line commenced in 1976.
+    <div className="text-gray-800">
+      {/* Hero Section */}
+      <section className="bg-[#265186] text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Daman Packaging
+          </h1>
+          <p className="text-xl md:text-2xl mb-8">
+            Manufacturer of Exclusively Virgin Quality HM-HDPE Jerry Cans & Open Top Drums
           </p>
-          
-          <p className="mb-6">
-            With modernization and constant upgradation of our plant with the latest technology, the company has never looked back. Our endeavour right from suggesting proper packaging and filling methods, providing packaging solutions for industrial and food grade aromatics, to selecting the right grades and stringent quality controls has made us a name to reckon with.
-          </p>
+          <Link
+            to="/contact"
+            className="bg-white text-[#265186] font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </section>
 
-          <div className="flex flex-wrap justify-between gap-2 mt-4">
-            <div className="border border-gray-300">
-              <img src="https://i.imgur.com/uxpBxzm.png" alt="ISO 9001:2008" className="w-full h-auto" />
+      {/* Overview Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#265186] mb-4">
+              Welcome to Daman Packaging
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Certified with ISO 9001: 2015, we are a packaging solution provider
+              company incorporated in October 2020, serving diverse industries.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-[#265186]">
+              <h3 className="text-xl font-bold mb-3 text-[#265186]">
+                Quality Assurance
+              </h3>
+              <p>
+                We adhere to stringent quality control measures, ensuring our packaging
+                products meet the highest industry standards.
+              </p>
             </div>
-            <div className="border border-gray-300">
-              <img src="https://i.imgur.com/5VTyCKD.png" alt="UN Approved" className="w-full h-auto" />
+
+            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-[#265186]">
+              <h3 className="text-xl font-bold mb-3 text-[#265186]">
+                Innovative Solutions
+              </h3>
+              <p>
+                Our team develops innovative packaging solutions tailored to meet the
+                specific requirements of various industries.
+              </p>
             </div>
-            <div className="border border-gray-300">
-              <img src="https://i.imgur.com/1Te4eqT.png" alt="High Drop Impact Resistance" className="w-full h-auto" />
+
+            <div className="bg-white p-6 rounded-lg shadow-lg border-t-4 border-[#265186]">
+              <h3 className="text-xl font-bold mb-3 text-[#265186]">
+                Customer Satisfaction
+              </h3>
+              <p>
+                We prioritize customer satisfaction, delivering reliable products and
+                exceptional service to build lasting relationships.
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Footer */}
-      <footer className="bg-[#fff8e1] p-2 text-center text-sm border-t mt-4">
-        All Rights Reserved By Daman Packaging | <Link to="/disclaimer" className="hover:underline">Disclaimer</Link>
-      </footer>
+      {/* Industries We Serve */}
+      <section className="bg-gray-100 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-[#265186] mb-12 text-center">
+            Industries We Serve
+          </h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            {["Pharmaceutical", "Chemical", "Speciality Chemical", "Cosmetics", 
+              "Perfumes", "Adhesives", "Lubricants", "Others"].map((industry) => (
+              <div key={industry} className="bg-white p-4 rounded-lg shadow">
+                <p className="font-medium">{industry}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-[#256694] text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Ready to Discuss Your Packaging Requirements?
+          </h2>
+          <p className="mb-8 max-w-2xl mx-auto">
+            Contact us today to learn how our packaging solutions can benefit your business.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              to="/contact"
+              className="bg-white text-[#265186] font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300"
+            >
+              Contact Us
+            </Link>
+            <Link
+              to="/about"
+              className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-[#265186] transition duration-300"
+            >
+              Learn More About Us
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

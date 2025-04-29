@@ -1,67 +1,118 @@
 
-import { Link } from "react-router-dom";
+import React from "react";
 
 const About = () => {
   return (
-    <div className="relative min-h-screen bg-[#fff8e1]" style={{ 
-      backgroundImage: "url('https://i.imgur.com/qV3RlM3.png')", 
-      backgroundRepeat: "repeat",
-      backgroundSize: "200px" 
-    }}>
-      {/* Header */}
-      <div className="bg-[#fff8e1] pt-4 px-4">
-        <div className="container mx-auto">
-          <div className="flex flex-col">
-            <h1 className="text-3xl md:text-4xl font-serif italic font-bold text-black">
-              Daman Packaging
-            </h1>
-            <div className="flex items-center mt-1">
-              <span className="text-sm">An</span>
-              <span className="text-sm font-bold ml-1 mr-1">ISO 9001:2008 Certified</span>
-              <span className="text-sm">Organisation</span>
-            </div>
-            <div className="text-right text-sm mt-[-20px]">
-              <div>E: <a href="mailto:rpcipl@gmail.com" className="hover:underline">rpcipl@gmail.com</a> | T: +91 22 25836346 | Mumbai, INDIA</div>
+    <div className="text-gray-800">
+      {/* Hero Section */}
+      <section className="bg-[#265186] text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">About Us</h1>
+          <p className="text-xl max-w-3xl mx-auto">
+            Learn more about Daman Packaging and our commitment to quality
+          </p>
+        </div>
+      </section>
+
+      {/* Company Profile Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#265186] mb-6">
+              Company Profile & Overview
+            </h2>
+            
+            <div className="prose max-w-none">
+              <p className="mb-4">
+                Daman Packaging (Certified with ISO 9001: 2015) is a packaging solution 
+                provider company incorporated on 17th October 2020. This is a private company 
+                located in Silvassa Union territory of Daman & Diu, Dadra & Nagar Haveli. 
+              </p>
+              
+              <p className="mb-4">
+                Company is engaged in manufacturing of a variety of innovative packaging products
+                to diverse industries like Pharma, Chemicals, Speciality Chemical,
+                cosmetics, Perfumes, Adhesive, Lubricants and more.
+              </p>
+              
+              <p className="mb-8">
+                We have awarded with ISO 9000-2015 Certification in the year 2022 and with a 
+                short span of time, we have gained the trust of numerous customers around the country.
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Navigation */}
-      <div className="mt-2">
-        <nav className="border-t border-b">
-          <ul className="flex flex-wrap text-center">
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/" className="block">Home</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/about" className="block">About Us</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/certifications" className="block">Certifications</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/products" className="block">Products</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/features" className="block">Features</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/chemical-resistance" className="block">Chemical Resistance Chart</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/enquiry" className="block">Enquiry</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 border-r border-[#8B6914] hover:bg-[#a67a0a]"><Link to="/careers" className="block">Careers</Link></li>
-            <li className="bg-[#b8860b] text-white py-2 px-4 hover:bg-[#a67a0a]"><Link to="/contact" className="block">Contact Us</Link></li>
-          </ul>
-        </nav>
-      </div>
+      {/* Quality Commitment */}
+      <section className="bg-gray-100 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#265186] mb-6">
+              Our Commitment to Quality
+            </h2>
+            
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold mb-3 text-[#265186]">
+                  ISO 9001:2015 Certified
+                </h3>
+                <p className="text-gray-700">
+                  Our quality management system meets international standards, ensuring 
+                  consistent product quality and customer satisfaction.
+                </p>
+              </div>
+              
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold mb-3 text-[#265186]">
+                  Manufacturing Excellence
+                </h3>
+                <p className="text-gray-700">
+                  We utilize state-of-the-art technology and follow stringent quality control 
+                  procedures throughout the production process.
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold mb-3 text-[#265186]">
+                  Customer-Centric Approach
+                </h3>
+                <p className="text-gray-700">
+                  We listen to our customers' requirements and develop tailored packaging 
+                  solutions to meet their specific needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* Main Content */}
-      <div className="container mx-auto p-4 bg-white mt-4">
-        <h2 className="text-2xl font-bold text-[#b8392e] mb-4">About Daman Packaging</h2>
-        <p className="mb-4">
-          Daman Packaging is one of the leading manufacturers of plastic containers in India, with a history spanning over three decades.
-        </p>
-        <p className="mb-4">
-          Established in 1976, we have consistently maintained our position at the forefront of the packaging industry through continuous innovation and a commitment to quality.
-        </p>
-        <p className="mb-4">
-          Our company is dedicated to providing high-quality packaging solutions for various industries, with a focus on plastic containers that meet international standards.
-        </p>
-      </div>
-
-      {/* Footer */}
-      <footer className="bg-[#fff8e1] p-2 text-center text-sm border-t mt-4">
-        All Rights Reserved By Daman Packaging | <Link to="/disclaimer" className="hover:underline">Disclaimer</Link>
-      </footer>
+      {/* Vision & Mission */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h2 className="text-2xl font-bold text-[#265186] mb-4">Our Vision</h2>
+                <p className="text-gray-700">
+                  To become a leading provider of innovative and sustainable packaging 
+                  solutions, recognized for quality, reliability, and customer service 
+                  excellence across India.
+                </p>
+              </div>
+              
+              <div>
+                <h2 className="text-2xl font-bold text-[#265186] mb-4">Our Mission</h2>
+                <p className="text-gray-700">
+                  To deliver high-quality packaging products that meet or exceed our 
+                  customers' expectations while maintaining ethical business practices 
+                  and environmental responsibility.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
