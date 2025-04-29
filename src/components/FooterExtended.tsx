@@ -14,6 +14,9 @@ const FooterExtended: React.FC = () => {
             <p className="mb-4">
               Manufacturer of Exclusively Virgin Quality HM-HDPE Jerry Cans & Open Top Drums
             </p>
+            <p className="text-sm mb-4">
+              GSTIN: 26ADBPC8417F1ZX
+            </p>
             <GetQuoteButton className="mt-2" />
           </div>
           
