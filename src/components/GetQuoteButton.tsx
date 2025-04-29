@@ -13,7 +13,7 @@ const GetQuoteButton: React.FC<GetQuoteButtonProps> = ({
   variant = "default",
   size = "default" 
 }) => {
-  const whatsappNumber = "+919999999999"; // Replace with your actual WhatsApp number
+  const whatsappNumber = "+919426877849"; // Updated WhatsApp number
   const message = "Hello, I would like to get a quote for your packaging products.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
   

@@ -9,7 +9,7 @@ interface ContactInfoProps {
 }
 
 const ContactInfo: React.FC<ContactInfoProps> = ({ className = "", iconSize = 20, showTitle = true }) => {
-  const whatsappNumber = "+919999999999"; // Replace with your actual WhatsApp number
+  const whatsappNumber = "+919426877849"; // Updated WhatsApp number
   
   return (
     <div className={`space-y-4 ${className}`}>
@@ -25,7 +25,7 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ className = "", iconSize = 20
       
       <div className="flex items-center gap-3">
         <Phone size={iconSize} className="text-blue-700 flex-shrink-0" />
-        <a href="tel:+919999999999" className="hover:underline">+91 9999 999 999</a>
+        <a href="tel:+919426877849" className="hover:underline">+91 94268 77849</a>
       </div>
       
       <div className="flex items-center gap-3">
