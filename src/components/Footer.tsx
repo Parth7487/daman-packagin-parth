@@ -12,7 +12,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/33086455-9827-4f07-ba92-208b1880b389.png" 
                 alt="Daman Packaging Logo" 
-                className="h-24 w-auto"
+                className="h-32 w-auto" // Increased from h-24 to h-32
               />
             </div>
             <h3 className="text-xl font-semibold mb-2">Daman Packaging</h3>

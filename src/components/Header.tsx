@@ -34,14 +34,14 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/33086455-9827-4f07-ba92-208b1880b389.png" 
                 alt="Daman Packaging Logo" 
-                className="h-16 w-auto mr-3" // Increased size from h-10 to h-16
+                className="h-20 w-auto mr-3" // Increased size from h-16 to h-20
               />
               <span className="text-xl md:text-2xl lg:text-3xl">Daman Packaging</span>
             </Link>
           </div>
           
           <nav className="w-full md:w-auto">
-            <ul className="flex flex-wrap justify-center space-x-2 md:space-x-8 text-base md:text-lg">
+            <ul className="flex flex-wrap justify-center md:justify-end space-x-2 md:space-x-8 text-base md:text-lg bg-[#1b3c64] md:bg-transparent py-2 px-4 md:p-0 rounded-lg shadow-md md:shadow-none w-full">
               <li className="py-2">
                 <Link to="/" className="px-3 py-2 hover:text-gray-200 font-medium">
                   Home
