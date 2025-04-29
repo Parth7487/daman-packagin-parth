@@ -42,6 +42,11 @@ const Header = () => {
                 </Link>
               </li>
               <li className="py-2">
+                <Link to="/products" className="px-3 py-2 hover:text-gray-200">
+                  Products
+                </Link>
+              </li>
+              <li className="py-2">
                 <Link to="/about" className="px-3 py-2 hover:text-gray-200">
                   About Us
                 </Link>
