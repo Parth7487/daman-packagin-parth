@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MapPin, Phone, Mail, WhatsApp } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 interface ContactInfoProps {
   className?: string;
@@ -34,7 +34,21 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ className = "", iconSize = 20
       </div>
       
       <div className="flex items-center gap-3">
-        <WhatsApp size={iconSize} className="text-green-600 flex-shrink-0" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width={iconSize}
+          height={iconSize}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="text-green-600 flex-shrink-0"
+        >
+          <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+          <path d="M9 10a.5.5 0 0 1 1 0c0 .97 2 3 2 3a.5.5 0 0 0 1 0V6a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3" />
+        </svg>
         <a 
           href={`https://wa.me/${whatsappNumber}`} 
           target="_blank" 

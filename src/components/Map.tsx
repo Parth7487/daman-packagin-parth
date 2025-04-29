@@ -17,7 +17,8 @@ const Map = () => {
 
     mapboxgl.accessToken = mapboxToken;
     
-    const silvassaCoordinates = [73.0960, 20.2704]; // Approximate coordinates for Silvassa
+    // Explicitly type as [number, number] to match LngLatLike
+    const silvassaCoordinates: [number, number] = [73.0960, 20.2704]; // Coordinates for Silvassa
     
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
