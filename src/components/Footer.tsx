@@ -1,65 +1,68 @@
 
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#265186] text-white py-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex flex-col items-center md:items-start">
-            <div className="mb-4 flex justify-center md:justify-start">
-              <img 
-                src="/lovable-uploads/33086455-9827-4f07-ba92-208b1880b389.png" 
-                alt="Daman Packaging Logo" 
-                className="h-32 w-auto" // Increased from h-24 to h-32
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-6 pt-10 pb-6">
+        <div className="flex flex-wrap justify-between">
+          <div className="w-full md:w-1/3 mb-6">
+            <Link to="/" className="flex items-center mb-4">
+              <img
+                src="/lovable-uploads/33086455-9827-4f07-ba92-208b1880b389.png"
+                alt="Daman Packaging"
+                className="h-16 w-auto" // Increased size from default
               />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Daman Packaging</h3>
-            <p className="mb-4 text-center md:text-left">
+            </Link>
+            <p className="text-gray-400">
               Manufacturer of Exclusively Virgin Quality HM-HDPE Jerry Cans & Open Top Drums
             </p>
-            <p className="text-sm">
-              GSTIN: 26ADBPC8417F1ZX
-            </p>
           </div>
-          
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="hover:underline">Home</Link>
+
+          <div className="w-full md:w-1/3 mb-6">
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul>
+              <li className="mb-2">
+                <Link to="/" className="text-gray-400 hover:text-white transition-colors">
+                  Home
+                </Link>
               </li>
-              <li>
-                <Link to="/about" className="hover:underline">About Us</Link>
+              <li className="mb-2">
+                <Link to="/products" className="text-gray-400 hover:text-white transition-colors">
+                  Products
+                </Link>
               </li>
-              <li>
-                <Link to="/contact" className="hover:underline">Contact Us</Link>
+              <li className="mb-2">
+                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
-          
-          <div>
-            <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
-            <address className="not-italic">
-              <p className="mb-2">SHED NO.2, PLOT NO. 50, GOVERNMENT INDUSTRIAL ESTATE, MASAT, SILVASSA</p>
-              <p className="mb-2">Dadra and Nagar Haveli and Daman and Diu - 396230</p>
-              <p className="mb-2">
-                <a href="mailto:sales1@damanpackaging.com" className="hover:underline">
-                  Email: sales1@damanpackaging.com
-                </a>
-              </p>
-              <p>
-                <a href="https://www.damanpackaging.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                  Website: www.damanpackaging.com
-                </a>
-              </p>
-            </address>
+
+          <div className="w-full md:w-1/3 mb-6">
+            <h3 className="text-lg font-semibold mb-4">Contact Information</h3>
+            <p className="text-gray-400 mb-2">
+              <strong>Address:</strong> 123 Industrial Zone, City, State, Country
+            </p>
+            <p className="text-gray-400 mb-2">
+              <strong>Phone:</strong> +123 456 7890
+            </p>
+            <p className="text-gray-400 mb-2">
+              <strong>Email:</strong> info@damanpackaging.com
+            </p>
           </div>
         </div>
-        
-        <div className="border-t border-gray-600 mt-8 pt-6 text-center">
-          <p>&copy; {new Date().getFullYear()} Daman Packaging. All rights reserved.</p>
+
+        <div className="border-t border-gray-800 mt-8 pt-6 text-center">
+          <p className="text-gray-500 text-sm">
+            &copy; {new Date().getFullYear()} Daman Packaging. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>

@@ -1,69 +1,169 @@
 
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Mail, Phone } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [showProductDropdown, setShowProductDropdown] = useState(false);
+
   return (
-    <header className="bg-[#265186] text-white">
-      {/* Top bar with contact details */}
-      <div className="bg-[#256694] py-2">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
-          <div className="flex items-center space-x-4 mb-2 md:mb-0">
-            <div className="flex items-center">
-              <Mail className="h-4 w-4 mr-2" />
-              <a href="mailto:sales1@damanpackaging.com" className="hover:underline">
-                sales1@damanpackaging.com
-              </a>
+    <header className="bg-white border-b shadow-sm">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16 items-center">
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center">
+              <img
+                src="/lovable-uploads/33086455-9827-4f07-ba92-208b1880b389.png"
+                alt="Daman Packaging"
+                className="h-10 w-auto"
+              />
+              <span className="ml-2 text-xl font-semibold text-gray-900">Daman Packaging</span>
+            </Link>
+          </div>
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-center space-x-4">
+              <Link
+                to="/"
+                className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Home
+              </Link>
+              <div className="relative">
+                <button
+                  className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+                  onClick={() => setShowProductDropdown(!showProductDropdown)}
+                >
+                  Products
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                {showProductDropdown && (
+                  <div className="absolute z-10 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
+                    <Link
+                      to="/products#narrow-mouth-drum"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      onClick={() => setShowProductDropdown(false)}
+                    >
+                      NARROW MOUTH DRUM
+                    </Link>
+                    <Link
+                      to="/products#open-mouth-drum"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      onClick={() => setShowProductDropdown(false)}
+                    >
+                      OPEN MOUTH DRUM
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <Link
+                to="/about"
+                className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                About
+              </Link>
+              <Link
+                to="/contact"
+                className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Contact
+              </Link>
             </div>
           </div>
-          <div className="flex items-center">
-            <Phone className="h-4 w-4 mr-2" />
-            <a href="tel:+919426877849" className="hover:underline">
-              MR. B.R. CHAUHAN (+91 94268 77849)
-            </a>
+          <div className="-mr-2 flex md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-800 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            >
+              <span className="sr-only">Open main menu</span>
+              <svg
+                className={`${isOpen ? "hidden" : "block"} h-6 w-6`}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <svg
+                className={`${isOpen ? "block" : "hidden"} h-6 w-6`}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
-      
-      {/* Main navigation */}
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="text-2xl font-bold mb-4 md:mb-0 flex items-center">
-            <Link to="/" className="hover:text-gray-200 flex items-center">
-              <img 
-                src="/lovable-uploads/33086455-9827-4f07-ba92-208b1880b389.png" 
-                alt="Daman Packaging Logo" 
-                className="h-20 w-auto mr-3" // Increased size from h-16 to h-20
-              />
-              <span className="text-xl md:text-2xl lg:text-3xl">Daman Packaging</span>
-            </Link>
+
+      <div className={`${isOpen ? "block" : "hidden"} md:hidden bg-white`}>
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <Link
+            to="/"
+            className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium"
+            onClick={() => setIsOpen(false)}
+          >
+            Home
+          </Link>
+          <div>
+            <button
+              className="w-full text-left text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => setShowProductDropdown(!showProductDropdown)}
+            >
+              Products
+            </button>
+            {showProductDropdown && (
+              <div className="pl-6">
+                <Link
+                  to="/products#narrow-mouth-drum"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  onClick={() => {
+                    setShowProductDropdown(false);
+                    setIsOpen(false);
+                  }}
+                >
+                  NARROW MOUTH DRUM
+                </Link>
+                <Link
+                  to="/products#open-mouth-drum"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  onClick={() => {
+                    setShowProductDropdown(false);
+                    setIsOpen(false);
+                  }}
+                >
+                  OPEN MOUTH DRUM
+                </Link>
+              </div>
+            )}
           </div>
-          
-          <nav className="w-full md:w-auto">
-            <ul className="flex flex-wrap justify-center md:justify-end space-x-2 md:space-x-8 text-base md:text-lg bg-[#1b3c64] md:bg-transparent py-2 px-4 md:p-0 rounded-lg shadow-md md:shadow-none w-full">
-              <li className="py-2">
-                <Link to="/" className="px-3 py-2 hover:text-gray-200 font-medium">
-                  Home
-                </Link>
-              </li>
-              <li className="py-2">
-                <Link to="/products" className="px-3 py-2 hover:text-gray-200 font-medium">
-                  Products
-                </Link>
-              </li>
-              <li className="py-2">
-                <Link to="/about" className="px-3 py-2 hover:text-gray-200 font-medium">
-                  About Us
-                </Link>
-              </li>
-              <li className="py-2">
-                <Link to="/contact" className="px-3 py-2 hover:text-gray-200 font-medium">
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
-          </nav>
+          <Link
+            to="/about"
+            className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium"
+            onClick={() => setIsOpen(false)}
+          >
+            About
+          </Link>
+          <Link
+            to="/contact"
+            className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium"
+            onClick={() => setIsOpen(false)}
+          >
+            Contact
+          </Link>
         </div>
       </div>
     </header>
