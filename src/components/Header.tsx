@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header className="bg-white border-b shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-24 items-center">
+        <div className="flex justify-between h-32 sm:h-40 md:h-52 items-center">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <img
@@ -60,6 +60,18 @@ const Header = () => {
                 className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
               >
                 About
+              </Link>
+              <Link
+                to="/features"
+                className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Features
+              </Link>
+              <Link
+                to="/certifications"
+                className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Certifications
               </Link>
               <Link
                 to="/contact"
@@ -155,6 +167,20 @@ const Header = () => {
             onClick={() => setIsOpen(false)}
           >
             About
+          </Link>
+          <Link
+            to="/features"
+            className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium"
+            onClick={() => setIsOpen(false)}
+          >
+            Features
+          </Link>
+          <Link
+            to="/certifications"
+            className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium"
+            onClick={() => setIsOpen(false)}
+          >
+            Certifications
           </Link>
           <Link
             to="/contact"

@@ -6,6 +6,8 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Products from "./pages/Products";
+import Features from "./pages/Features";
+import Certifications from "./pages/Certifications";
 import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -21,6 +23,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/features" element={<Features />} />
+            <Route path="/certifications" element={<Certifications />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

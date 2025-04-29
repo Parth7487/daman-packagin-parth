@@ -92,9 +92,18 @@ const Contact = () => {
           
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-4">Our Location</h2>
-            <div className="aspect-video bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-600">Map will be displayed here</span>
-              {/* You can integrate an actual map here */}
+            <div className="aspect-video bg-gray-200">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.5308233662226!2d72.8425!3d19.1175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzAzLjAiTiA3MsKwNTAnMzMuMCJF!5e0!3m2!1sen!2sin!4v1651234567890!5m2!1sen!2sin" 
+                width="100%" 
+                height="300" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-md"
+                title="Daman Packaging Location"
+              ></iframe>
             </div>
           </div>
         </div>

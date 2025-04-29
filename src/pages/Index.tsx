@@ -28,7 +28,7 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="border-blue-600 bg-blue-600 text-black hover:bg-blue-700 hover:text-black">
+              <Button variant="outline" size="lg" className="bg-blue-600 text-black hover:bg-blue-700 hover:text-black">
                 Contact Us
               </Button>
             </Link>
@@ -42,7 +42,7 @@ const Index = () => {
           <h2 className="text-2xl font-bold mb-6">Our Certifications</h2>
           <div className="flex flex-wrap justify-center gap-4">
             <img 
-              src="/lovable-uploads/0aee1132-c834-4142-91ea-9f988195fabc.png" 
+              src="/lovable-uploads/7f88d094-07c6-455c-b591-c2b83eca3406.png" 
               alt="Certifications" 
               className="max-w-full h-auto"
             />
