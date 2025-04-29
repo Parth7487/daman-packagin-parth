@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ZoomableImage from "@/components/ZoomableImage";
+import ProductDetail from "@/components/ProductDetail";
 
 const Product = ({
   title,
@@ -54,8 +55,15 @@ const Products = () => {
 
   const narrowMouthDrums = [
     {
-      title: "JERRYCAN 5",
-      image: "/lovable-uploads/4684a0d9-0bed-4050-a74b-1cf29bf6dd48.png",
+      title: "5 Ltrs. Jerry Cans",
+      mainImage: {
+        src: "/lovable-uploads/acdc62a1-f133-4feb-b450-7d8a9fd244a2.png",
+        alt: "5 Ltrs Jerry Can"
+      },
+      detailImage: {
+        src: "/lovable-uploads/19b2c325-0b0a-43bf-bb40-96c489905682.png",
+        alt: "5 Ltrs Jerry Can Detailed Views"
+      },
       specs: [
         { label: "Useable Capacity (LTR.)", value: "5" },
         { label: "Height (mm)", value: "280" },
@@ -65,8 +73,11 @@ const Products = () => {
       ],
     },
     {
-      title: "JERRYCAN 10",
-      image: "/lovable-uploads/42dad834-500c-410e-a875-996bfc3c7f87.png",
+      title: "10 Ltrs. Stackable Jerry Cans",
+      mainImage: {
+        src: "/lovable-uploads/b0bceadd-9fd1-4448-8568-244444884b51.png",
+        alt: "10 Ltrs Stackable Jerry Can"
+      },
       specs: [
         { label: "Useable Capacity (LTR.)", value: "10" },
         { label: "Height (mm)", value: "340" },
@@ -271,9 +282,21 @@ const Products = () => {
       <div id="narrow-mouth-drum" className="mb-12 pt-6">
         <h2 className="text-2xl font-bold mb-6 text-blue-800 border-b pb-2">NARROW MOUTH DRUM</h2>
         <div className="space-y-8">
-          {narrowMouthDrums.map((product, index) => (
-            <Product
+          {/* First two products use ProductDetail component for image switching */}
+          {narrowMouthDrums.slice(0, 2).map((product, index) => (
+            <ProductDetail
               key={index}
+              title={product.title}
+              mainImage={product.mainImage}
+              detailImage={product.detailImage}
+              specs={product.specs}
+            />
+          ))}
+          
+          {/* Rest of the products use regular Product component */}
+          {narrowMouthDrums.slice(2).map((product, index) => (
+            <Product
+              key={index + 2}
               title={product.title}
               image={product.image}
               specs={product.specs}

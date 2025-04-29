@@ -9,7 +9,7 @@ interface ContactInfoProps {
 }
 
 const ContactInfo: React.FC<ContactInfoProps> = ({ className = "", iconSize = 20, showTitle = true }) => {
-  const whatsappNumber = "+919426877849"; // Updated WhatsApp number
+  const whatsappNumber = "+919426877849";
   
   return (
     <div className={`space-y-4 ${className}`}>
