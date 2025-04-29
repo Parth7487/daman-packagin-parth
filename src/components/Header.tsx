@@ -28,9 +28,14 @@ const Header = () => {
       {/* Main navigation */}
       <div className="container mx-auto px-4 py-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="text-2xl font-bold mb-4 md:mb-0">
-            <Link to="/" className="hover:text-gray-200">
-              Daman Packaging
+          <div className="text-2xl font-bold mb-4 md:mb-0 flex items-center">
+            <Link to="/" className="hover:text-gray-200 flex items-center">
+              <img 
+                src="/lovable-uploads/33086455-9827-4f07-ba92-208b1880b389.png" 
+                alt="Daman Packaging Logo" 
+                className="h-10 w-auto mr-2"
+              />
+              <span>Daman Packaging</span>
             </Link>
           </div>
           

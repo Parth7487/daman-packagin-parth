@@ -14,7 +14,7 @@ const Products = () => {
         { capacity: "500 ml", neck: "28 mm", material: "HDPE", weight: "40 grams", dimensions: "75 x 49 x 166 mm" },
         { capacity: "1000 ml", neck: "28 mm", material: "HDPE", weight: "65 grams", dimensions: "86 x 61 x 210 mm" },
       ],
-      imageUrl: "https://www.rajdeepplasticcontainers.com/images/hdpe-bottle.jpg"
+      imageUrl: "/lovable-uploads/0778ba5a-760d-40b1-985d-60832ff5daf5.png"
     },
     {
       title: "HDPE Jerry Cans",
@@ -28,7 +28,7 @@ const Products = () => {
         { capacity: "35 Liter", neck: "55 mm / 42 mm", material: "HDPE", weight: "1200 grams", dimensions: "310 x 280 x 480 mm" },
         { capacity: "50 Liter", neck: "55 mm / 42 mm", material: "HDPE", weight: "1700 grams", dimensions: "360 x 310 x 510 mm" },
       ],
-      imageUrl: "https://www.rajdeepplasticcontainers.com/images/hdpe-jerry-can.jpg"
+      imageUrl: "/lovable-uploads/0778ba5a-760d-40b1-985d-60832ff5daf5.png"
     },
     {
       title: "HDPE Open Top Drums",
@@ -42,7 +42,7 @@ const Products = () => {
         { capacity: "50 Liter", neck: "Opening 380 mm", material: "HDPE", weight: "2200 grams", dimensions: "400 mm dia x 470 mm height" },
         { capacity: "60 Liter", neck: "Opening 380 mm", material: "HDPE", weight: "2500 grams", dimensions: "400 mm dia x 550 mm height" },
       ],
-      imageUrl: "https://www.rajdeepplasticcontainers.com/images/open-top-drum.jpg"
+      imageUrl: "/lovable-uploads/0778ba5a-760d-40b1-985d-60832ff5daf5.png"
     },
     {
       title: "HDPE Open Mouth Drums",
@@ -55,13 +55,16 @@ const Products = () => {
         { capacity: "200 Liter", neck: "Two openings 50/38 mm", material: "HDPE", weight: "7600 grams", dimensions: "585 mm dia x 915 mm height" },
         { capacity: "235 Liter", neck: "Two openings 50/38 mm", material: "HDPE", weight: "8500 grams", dimensions: "585 mm dia x 1040 mm height" },
       ],
-      imageUrl: "https://www.rajdeepplasticcontainers.com/images/open-mouth-drum.jpg"
+      imageUrl: "/lovable-uploads/0778ba5a-760d-40b1-985d-60832ff5daf5.png"
     }
   ];
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-[#265186] mb-8 text-center">Our Products</h1>
+      <div className="bg-cover bg-center h-48 flex items-center justify-center mb-8" 
+           style={{ backgroundImage: 'url(/lovable-uploads/0778ba5a-760d-40b1-985d-60832ff5daf5.png)' }}>
+        <h1 className="text-3xl font-bold text-white mb-8 text-center bg-black bg-opacity-50 p-4 rounded">Our Products</h1>
+      </div>
       
       <div className="flex flex-col gap-16">
         {productCategories.map((category, idx) => (
@@ -91,17 +94,17 @@ const Products = () => {
                   <Table>
                     <TableHeader>
                       <TableRow>
-                        <TableHead>Capacity</TableHead>
-                        <TableHead>Neck</TableHead>
-                        <TableHead>Material</TableHead>
-                        <TableHead>Weight</TableHead>
-                        <TableHead>Dimensions</TableHead>
+                        <TableHead className="bg-[#265186] text-white">Capacity</TableHead>
+                        <TableHead className="bg-[#265186] text-white">Neck</TableHead>
+                        <TableHead className="bg-[#265186] text-white">Material</TableHead>
+                        <TableHead className="bg-[#265186] text-white">Weight</TableHead>
+                        <TableHead className="bg-[#265186] text-white">Dimensions</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
                       {category.items.map((item, itemIdx) => (
-                        <TableRow key={itemIdx}>
-                          <TableCell>{item.capacity}</TableCell>
+                        <TableRow key={itemIdx} className={itemIdx % 2 === 0 ? "bg-gray-50" : ""}>
+                          <TableCell className="font-medium">{item.capacity}</TableCell>
                           <TableCell>{item.neck}</TableCell>
                           <TableCell>{item.material}</TableCell>
                           <TableCell>{item.weight}</TableCell>
