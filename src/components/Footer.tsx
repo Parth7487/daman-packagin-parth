@@ -11,7 +11,7 @@ const Footer = () => {
               <img
                 src="/lovable-uploads/33086455-9827-4f07-ba92-208b1880b389.png"
                 alt="Daman Packaging"
-                className="h-16 w-auto" // Increased size from default
+                className="h-24 w-auto" // Increased size from h-16 to h-24
               />
             </Link>
             <p className="text-gray-400">

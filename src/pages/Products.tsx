@@ -182,6 +182,86 @@ const Products = () => {
         { label: "Weight Range (kgs)", value: "2.5 / 2.8" },
       ],
     },
+    {
+      title: "FOT 10",
+      image: "/lovable-uploads/b22718a5-a733-4cfb-8894-5078eb795b86.png",
+      specs: [
+        { label: "Height (mm)", value: "250" },
+        { label: "Dia (mm)", value: "250" },
+        { label: "Mouth Opening (mm)", value: "245" },
+        { label: "Weight Range (gms)", value: "500" },
+      ],
+    },
+    {
+      title: "FOT 15",
+      image: "/lovable-uploads/fca43bdf-ce21-46cf-8a35-6fc47550232e.png",
+      specs: [
+        { label: "Height (mm)", value: "355" },
+        { label: "Dia (mm)", value: "250" },
+        { label: "Mouth Opening (mm)", value: "245" },
+        { label: "Weight Range (kgs)", value: "0.8/1.0" },
+      ],
+    },
+    {
+      title: "FOT 20",
+      image: "/lovable-uploads/526b53c5-353c-4581-bdbf-42b6a20e9f7f.png",
+      specs: [
+        { label: "Height (mm)", value: "445" },
+        { label: "Dia (mm)", value: "300" },
+        { label: "Mouth Opening (mm)", value: "250" },
+        { label: "Weight Range (kgs)", value: "1.5/1.8" },
+      ],
+    },
+    {
+      title: "FOT 35 WITH PLASTIC RING",
+      image: "/lovable-uploads/298cf9d3-e0bd-4816-8437-a78318b0ac92.png",
+      specs: [
+        { label: "Height (mm)", value: "560" },
+        { label: "Dia (mm)", value: "330" },
+        { label: "Mouth Opening (mm)", value: "250" },
+        { label: "Weight Range (kgs)", value: "1.8/2.0/2.5" },
+      ],
+    },
+    {
+      title: "FOT 35 WITH METAL RING",
+      image: "/lovable-uploads/37d70696-4dc2-4bc1-b51d-6e75f7a72fee.png",
+      specs: [
+        { label: "Height (mm)", value: "560" },
+        { label: "Dia (mm)", value: "330" },
+        { label: "Mouth Opening (mm)", value: "250" },
+        { label: "Weight Range (kgs)", value: "1.8/2.0/2.5" },
+      ],
+    },
+    {
+      title: "FOT 50",
+      image: "/lovable-uploads/f90ec22a-312e-43df-aa72-3b9a5be839ff.png",
+      specs: [
+        { label: "Height (mm)", value: "575" },
+        { label: "Dia (mm)", value: "375" },
+        { label: "Mouth Opening (mm)", value: "315" },
+        { label: "Weight Range (kgs)", value: "2.5 / 2.8" },
+      ],
+    },
+    {
+      title: "FOT 60",
+      image: "/lovable-uploads/9711786b-141c-4347-94f8-f45eb87fff98.png",
+      specs: [
+        { label: "Height (mm)", value: "630" },
+        { label: "Dia (mm)", value: "385" },
+        { label: "Mouth Opening (mm)", value: "315" },
+        { label: "Weight Range (kgs)", value: "3.0 / 3.3 / 4.2" },
+      ],
+    },
+    {
+      title: "FOT 80",
+      image: "/lovable-uploads/a0e7e47f-429a-42b1-9da0-6559688d1253.png",
+      specs: [
+        { label: "Height (mm)", value: "725" },
+        { label: "Dia (mm)", value: "410" },
+        { label: "Mouth Opening (mm)", value: "315" },
+        { label: "Weight Range (kgs)", value: "3.3 / 3.5" },
+      ],
+    },
   ];
 
   return (
