@@ -13,7 +13,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="flex flex-col">
             <h1 className="text-3xl md:text-4xl font-serif italic font-bold text-black">
-              Rajdeep Plastic Containers (I) Pvt. Ltd.
+              Daman Packaging - Rajdeep Plastic Containers (I) Pvt. Ltd.
             </h1>
             <div className="flex items-center mt-1">
               <span className="text-sm">An</span>
@@ -90,10 +90,10 @@ const Index = () => {
 
         {/* Right Content */}
         <div className="w-full md:w-[70%] bg-white p-4">
-          <h2 className="text-2xl font-bold text-[#b8392e] mb-4">Welcome to Rajdeep Plastic Containers (I) Pvt. Ltd.</h2>
+          <h2 className="text-2xl font-bold text-[#b8392e] mb-4">Welcome to Daman Packaging - Rajdeep Plastic Containers (I) Pvt. Ltd.</h2>
           
           <p className="mb-4">
-            In a span of three decades, <strong>Rajdeep Plastic Containers (I) Pvt. Ltd.</strong> has grown to become one of the leading manufacturers of plastic containers in India. Our first production line commenced in 1976.
+            In a span of three decades, <strong>Daman Packaging - Rajdeep Plastic Containers (I) Pvt. Ltd.</strong> has grown to become one of the leading manufacturers of plastic containers in India. Our first production line commenced in 1976.
           </p>
           
           <p className="mb-6">
@@ -116,7 +116,7 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="bg-[#fff8e1] p-2 text-center text-sm border-t mt-4">
-        All Rights Reserved By Rajdeep Plastic Containers (I) Pvt. Ltd. | <Link to="/disclaimer" className="hover:underline">Disclaimer</Link>
+        All Rights Reserved By Daman Packaging - Rajdeep Plastic Containers (I) Pvt. Ltd. | <Link to="/disclaimer" className="hover:underline">Disclaimer</Link>
       </footer>
     </div>
   );
