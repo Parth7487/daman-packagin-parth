@@ -7,10 +7,20 @@ interface ZoomableImageProps {
   src: string;
   alt: string;
   className?: string;
+  onClick?: () => void; // Add onClick prop to the interface
 }
 
-const ZoomableImage: React.FC<ZoomableImageProps> = ({ src, alt, className }) => {
+const ZoomableImage: React.FC<ZoomableImageProps> = ({ src, alt, className, onClick }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    // If onClick is provided, call it; otherwise, open the zoom dialog
+    if (onClick) {
+      onClick();
+    } else {
+      setIsOpen(true);
+    }
+  };
 
   return (
     <>
@@ -18,7 +28,7 @@ const ZoomableImage: React.FC<ZoomableImageProps> = ({ src, alt, className }) =>
         src={src} 
         alt={alt} 
         className={`cursor-pointer transition-transform hover:scale-105 ${className}`}
-        onClick={() => setIsOpen(true)} 
+        onClick={handleClick} 
       />
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
