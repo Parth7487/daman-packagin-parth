@@ -16,7 +16,7 @@ const Index = () => {
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-6">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Daman Packaging
+            Welcome to Daman Packaging
           </h1>
           <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl">
             Manufacturer of Exclusively Virgin Quality HM-HDPE Jerry Cans & Open Top Drums
@@ -28,13 +28,27 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-[#265186]">
+              <Button variant="outline" size="lg" className="border-blue-600 bg-blue-600 text-black hover:bg-blue-700 hover:text-black">
                 Contact Us
               </Button>
             </Link>
           </div>
         </div>
       </div>
+
+      {/* Certifications Section */}
+      <section className="py-8 px-4 bg-gray-100">
+        <div className="container mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-6">Our Certifications</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            <img 
+              src="/lovable-uploads/0aee1132-c834-4142-91ea-9f988195fabc.png" 
+              alt="Certifications" 
+              className="max-w-full h-auto"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Features Section */}
       <section className="py-16 px-4">
@@ -83,7 +97,7 @@ const Index = () => {
             Contact us today to discuss your packaging requirements and get a customized quote.
           </p>
           <Link to="/contact">
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-[#265186]">
+            <Button variant="outline" size="lg" className="bg-black text-white border-black hover:bg-gray-800 hover:text-white">
               Get in Touch
             </Button>
           </Link>

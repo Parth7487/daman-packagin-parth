@@ -1,6 +1,6 @@
-
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import ZoomableImage from "@/components/ZoomableImage";
 
 const Product = ({
   title,
@@ -14,7 +14,7 @@ const Product = ({
   return (
     <div className="flex flex-col md:flex-row gap-6 p-6 border border-gray-200 rounded-lg bg-white shadow-sm">
       <div className="w-full md:w-1/3 flex items-center justify-center">
-        <img
+        <ZoomableImage
           src={image}
           alt={title}
           className="w-full max-w-[300px] h-auto object-contain"

@@ -1,3 +1,4 @@
+
 import React from "react";
 
 const Contact = () => {
@@ -59,7 +60,7 @@ const Contact = () => {
             
             <button
               type="submit"
-              className="px-6 py-3 bg-blue-700 text-white font-medium rounded-md hover:bg-blue-800 transition-colors"
+              className="px-6 py-3 bg-black text-white font-medium rounded-md hover:bg-gray-800 transition-colors"
             >
               Send Message
             </button>

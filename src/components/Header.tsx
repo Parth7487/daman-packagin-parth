@@ -10,15 +10,14 @@ const Header = () => {
   return (
     <header className="bg-white border-b shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+        <div className="flex justify-between h-24 items-center">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <img
                 src="/lovable-uploads/33086455-9827-4f07-ba92-208b1880b389.png"
                 alt="Daman Packaging"
-                className="h-10 w-auto"
+                className="h-[150px] w-[150px] object-contain"
               />
-              <span className="ml-2 text-xl font-semibold text-gray-900">Daman Packaging</span>
             </Link>
           </div>
           <div className="hidden md:block">
