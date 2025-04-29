@@ -27,11 +27,6 @@ const Index = () => {
                 View Our Products
               </Button>
             </Link>
-            <Link to="/contact">
-              <Button variant="outline" size="lg" className="bg-blue-600 text-black hover:bg-blue-700 hover:text-black">
-                Contact Us
-              </Button>
-            </Link>
           </div>
         </div>
       </div>
