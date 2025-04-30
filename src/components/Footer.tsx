@@ -1,7 +1,17 @@
 
 import { Link } from "react-router-dom";
+import { Download, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
+  // Function to open Google Maps with directions to the location
+  const openGoogleMapsDirections = () => {
+    // Using Silvassa location coordinates
+    const address = "Daman Packaging, SHED NO.2, PLOT NO. 50, GOVERNMENT INDUSTRIAL ESTATE, MASAT, SILVASSA";
+    const encodedAddress = encodeURIComponent(address);
+    window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
+  };
+  
   return (
     <footer className="bg-white text-gray-800">
       <div className="container mx-auto px-6 pt-10 pb-6">
@@ -11,12 +21,20 @@ const Footer = () => {
               <img
                 src="/lovable-uploads/33086455-9827-4f07-ba92-208b1880b389.png"
                 alt="Daman Packaging"
-                className="h-36 w-auto" // Increased size from h-24 to h-36
+                className="h-36 w-auto"
+                loading="eager"
               />
             </Link>
             <p className="text-gray-600">
               Manufacturer of Exclusively Virgin Quality HM-HDPE Jerry Cans & Open Top Drums
             </p>
+            <div className="mt-4">
+              <Link to="/downloads/brochure.pdf" target="_blank" download>
+                <Button variant="outline" size="sm" className="flex items-center">
+                  <Download size={16} className="mr-2" /> Download Brochure
+                </Button>
+              </Link>
+            </div>
           </div>
 
           <div className="w-full md:w-1/3 mb-6">
@@ -48,7 +66,14 @@ const Footer = () => {
           <div className="w-full md:w-1/3 mb-6">
             <h3 className="text-lg font-semibold mb-4">Contact Information</h3>
             <p className="text-gray-600 mb-2">
-              <strong>Address:</strong> 123 Industrial Zone, City, State, Country
+              <strong>Address:</strong> 
+              <button 
+                onClick={openGoogleMapsDirections} 
+                className="ml-2 text-blue-600 hover:text-blue-800 hover:underline inline-flex items-center"
+              >
+                <span>123 Industrial Zone, City, State, Country</span>
+                <MapPin size={16} className="ml-1" />
+              </button>
             </p>
             <p className="text-gray-600 mb-2">
               <strong>Phone:</strong> +123 456 7890

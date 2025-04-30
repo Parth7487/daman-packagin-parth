@@ -3,8 +3,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ContactInfo from './ContactInfo';
 import GetQuoteButton from './GetQuoteButton';
+import { Download, MapPin } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const FooterExtended: React.FC = () => {
+  // Function to open Google Maps with directions to the location
+  const openGoogleMapsDirections = () => {
+    // Using Silvassa location coordinates
+    const address = "Daman Packaging, SHED NO.2, PLOT NO. 50, GOVERNMENT INDUSTRIAL ESTATE, MASAT, SILVASSA";
+    const encodedAddress = encodeURIComponent(address);
+    window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
+  };
+
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-4 md:px-6">
@@ -17,7 +27,14 @@ const FooterExtended: React.FC = () => {
             <p className="text-sm mb-4">
               GSTIN: 26ADBPC8417F1ZX
             </p>
-            <GetQuoteButton className="mt-2" />
+            <div className="flex flex-col gap-2">
+              <GetQuoteButton className="mt-2" />
+              <Link to="/downloads/brochure.pdf" target="_blank" download>
+                <Button variant="outline" size="sm" className="flex items-center">
+                  <Download size={16} className="mr-2" /> Download Brochure
+                </Button>
+              </Link>
+            </div>
           </div>
           
           <div>
@@ -34,6 +51,15 @@ const FooterExtended: React.FC = () => {
           
           <div className="md:col-span-2">
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
+            <div className="flex items-start mb-2">
+              <MapPin size={20} className="mr-2 mt-1 flex-shrink-0" />
+              <button 
+                onClick={openGoogleMapsDirections} 
+                className="text-blue-300 hover:text-blue-200 hover:underline text-left"
+              >
+                SHED NO.2, PLOT NO. 50, GOVERNMENT INDUSTRIAL ESTATE, MASAT, SILVASSA
+              </button>
+            </div>
             <ContactInfo iconSize={16} showTitle={false} className="text-sm" />
           </div>
         </div>
