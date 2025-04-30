@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import ContactInfo from '../components/ContactInfo';
-import Map from '../components/Map';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
@@ -65,11 +64,6 @@ const ContactUs: React.FC = () => {
         <div className="space-y-8">
           <div className="bg-gray-50 p-6 rounded-lg shadow-md">
             <ContactInfo />
-          </div>
-          
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Our Location</h2>
-            <Map />
           </div>
         </div>
       </div>
