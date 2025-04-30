@@ -30,7 +30,7 @@ const Footer = () => {
             </p>
             <div className="mt-4">
               <Link to="/downloads/brochure.pdf" target="_blank" download>
-                <Button variant="outline" size="sm" className="flex items-center">
+                <Button variant="outline" size="sm" className="flex items-center text-black">
                   <Download size={16} className="mr-2" /> Download Brochure
                 </Button>
               </Link>
@@ -87,6 +87,9 @@ const Footer = () => {
         <div className="border-t border-gray-200 mt-8 pt-6 text-center">
           <p className="text-gray-500 text-sm">
             &copy; {new Date().getFullYear()} Daman Packaging. All Rights Reserved.
+          </p>
+          <p className="text-gray-500 text-xs mt-2">
+            Designed and developed by <a href="https://www.devdesignify.agency" target="_blank" rel="noopener noreferrer" className="hover:underline">www.devdesignify.agency</a>
           </p>
         </div>
       </div>

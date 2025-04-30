@@ -11,16 +11,25 @@ interface ContactInfoProps {
 const ContactInfo: React.FC<ContactInfoProps> = ({ className = "", iconSize = 20, showTitle = true }) => {
   const whatsappNumber = "+919426877849";
   
+  const openGoogleMapsDirections = () => {
+    const address = "Daman Packaging, SHED NO.2, PLOT NO. 50, GOVERNMENT INDUSTRIAL ESTATE, MASAT, SILVASSA";
+    const encodedAddress = encodeURIComponent(address);
+    window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
+  };
+  
   return (
     <div className={`space-y-4 ${className}`}>
       {showTitle && <h3 className="text-lg font-bold mb-2">Contact Information</h3>}
       
       <div className="flex items-start gap-3">
         <MapPin size={iconSize} className="text-blue-700 flex-shrink-0 mt-1" />
-        <span>
+        <button 
+          onClick={openGoogleMapsDirections}
+          className="text-left hover:underline"
+        >
           SHED NO.2, PLOT NO. 50, GOVERNMENT INDUSTRIAL ESTATE, MASAT, SILVASSA, Masat Industrial Area, 
           Dadra And Nagar Haveli, Dadra and Nagar Haveli and Daman and Diu - 396230.
-        </span>
+        </button>
       </div>
       
       <div className="flex items-center gap-3">

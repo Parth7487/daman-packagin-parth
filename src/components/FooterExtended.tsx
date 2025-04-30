@@ -30,7 +30,7 @@ const FooterExtended: React.FC = () => {
             <div className="flex flex-col gap-2">
               <GetQuoteButton className="mt-2" />
               <Link to="/downloads/brochure.pdf" target="_blank" download>
-                <Button variant="outline" size="sm" className="flex items-center">
+                <Button variant="outline" size="sm" className="flex items-center text-black">
                   <Download size={16} className="mr-2" /> Download Brochure
                 </Button>
               </Link>
@@ -67,6 +67,9 @@ const FooterExtended: React.FC = () => {
         <div className="mt-8 pt-6 border-t border-gray-700 text-center">
           <p className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()} Daman Packaging. All rights reserved.
+          </p>
+          <p className="text-xs text-gray-400 mt-2">
+            Designed and developed by <a href="https://www.devdesignify.agency" target="_blank" rel="noopener noreferrer" className="hover:underline">www.devdesignify.agency</a>
           </p>
         </div>
       </div>

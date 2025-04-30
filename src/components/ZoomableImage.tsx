@@ -17,7 +17,7 @@ const ZoomableImage: React.FC<ZoomableImageProps> = ({
   src, 
   alt, 
   className = '', 
-  loading = 'lazy',
+  loading = 'eager', // Changed default to eager for product images
   onClick 
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,6 +38,7 @@ const ZoomableImage: React.FC<ZoomableImageProps> = ({
         className={`${className} cursor-pointer`}
         onClick={handleClick}
         loading={loading}
+        fetchPriority="high" // Added fetch priority for faster loading
       />
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
@@ -47,6 +48,7 @@ const ZoomableImage: React.FC<ZoomableImageProps> = ({
             alt={alt} 
             className="w-full h-auto max-h-[80vh] object-contain" 
             loading="eager"
+            fetchPriority="high"
           />
         </DialogContent>
       </Dialog>

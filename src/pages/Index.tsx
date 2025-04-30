@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -11,7 +12,8 @@ const Index = () => {
         className="relative h-[300px] md:h-[500px] bg-cover bg-center w-full"
         style={{ 
           backgroundImage: `url('/lovable-uploads/0778ba5a-760d-40b1-985d-60832ff5daf5.png')`,
-          backgroundSize: 'cover'
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-4 md:p-6">
@@ -46,15 +48,28 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Customer Trust Section - We'll keep only this part instead of Features */}
+      {/* Features Section */}
       <section className="py-16 px-4">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold text-center text-[#265186] mb-8">Customer Trust</h2>
-          
-          <div className="bg-white p-8 rounded-lg shadow-md max-w-2xl mx-auto">
-            <p className="text-lg text-gray-600">
-              Earned the trust of numerous customers with our commitment to excellence.
-            </p>
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold text-[#265186] mb-2">1. Quality Products</h3>
+              <p className="text-gray-600">
+                ISO 9001:2015 certified manufacturer committed to delivering high-quality packaging products.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold text-[#265186] mb-2">2. Diverse Range</h3>
+              <p className="text-gray-600">
+                Comprehensive selection of HDPE bottles, jerry cans, and drums to meet various industry needs.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-bold text-[#265186] mb-2">3. Customer Trust</h3>
+              <p className="text-gray-600">
+                Earned the trust of numerous customers across India with our commitment to excellence.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -70,11 +85,6 @@ const Index = () => {
             <Link to="/contact">
               <Button variant="outline" size="lg" className="bg-black text-white border-black hover:bg-gray-800 hover:text-white">
                 Get in Touch
-              </Button>
-            </Link>
-            <Link to="/downloads/brochure.pdf" target="_blank" download>
-              <Button variant="outline" size="lg" className="bg-white text-black border-white hover:bg-gray-200">
-                <Download size={16} className="mr-2" /> Download Brochure
               </Button>
             </Link>
           </div>
