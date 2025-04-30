@@ -1,8 +1,7 @@
 
 import React, { useState } from 'react';
 import ZoomableImage from './ZoomableImage';
-import { Button } from "@/components/ui/button";
-import { Download, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 interface ProductImage {
@@ -60,14 +59,6 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
               <span className="text-gray-800">{spec.value}</span>
             </div>
           ))}
-        </div>
-        
-        <div className="mt-4">
-          <Link to="/downloads/brochure.pdf" target="_blank" download>
-            <Button variant="outline" size="sm" className="bg-[#265186] text-white hover:bg-[#1d3c69]">
-              <Download size={16} className="mr-2" /> Download Product Brochure
-            </Button>
-          </Link>
         </div>
       </div>
     </div>
