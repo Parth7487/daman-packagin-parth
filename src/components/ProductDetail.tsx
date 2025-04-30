@@ -40,7 +40,9 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
           alt={currentImage.alt}
           className="w-full max-w-[300px] h-auto object-contain cursor-pointer"
           onClick={handleImageClick}
-          loading="eager" // Added eager loading for product images
+          loading="eager"
+          width={300}
+          height={300}
         />
         {detailImage && (
           <div className="mt-2 text-center text-sm text-gray-500">

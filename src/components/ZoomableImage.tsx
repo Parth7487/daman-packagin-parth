@@ -11,16 +11,21 @@ export interface ZoomableImageProps {
   className?: string;
   loading?: 'lazy' | 'eager';
   onClick?: () => void;
+  width?: string | number;
+  height?: string | number;
 }
 
 const ZoomableImage: React.FC<ZoomableImageProps> = ({ 
   src, 
   alt, 
   className = '', 
-  loading = 'eager', // Changed default to eager for product images
-  onClick 
+  loading = 'eager',
+  onClick,
+  width = 'auto',
+  height = 'auto'
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const handleClick = () => {
     if (onClick) {
@@ -30,23 +35,32 @@ const ZoomableImage: React.FC<ZoomableImageProps> = ({
     }
   };
 
+  const handleLoad = () => {
+    setIsLoaded(true);
+  };
+
   return (
     <>
-      <img
-        src={src}
-        alt={alt}
-        className={`${className} cursor-pointer`}
-        onClick={handleClick}
-        loading={loading}
-        fetchPriority="high" // Added fetch priority for faster loading
-      />
+      <div className={`${!isLoaded ? 'bg-gray-100 animate-pulse' : ''}`} style={{width, height}}>
+        <img
+          src={src}
+          alt={alt}
+          className={`${className} cursor-pointer ${!isLoaded ? 'opacity-0' : 'opacity-100 transition-opacity duration-300'}`}
+          onClick={handleClick}
+          loading={loading}
+          fetchPriority="high"
+          onLoad={handleLoad}
+          width={typeof width === 'number' ? width : undefined}
+          height={typeof height === 'number' ? height : undefined}
+        />
+      </div>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="max-w-[80vw] p-0 bg-transparent border-none">
+        <DialogContent className="max-w-[90vw] p-0 bg-transparent border-none">
           <img 
             src={src} 
             alt={alt} 
-            className="w-full h-auto max-h-[80vh] object-contain" 
+            className="w-full h-auto max-h-[90vh] object-contain" 
             loading="eager"
             fetchPriority="high"
           />

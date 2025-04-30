@@ -2,18 +2,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Banner Section - Improved mobile responsiveness */}
       <div 
-        className="relative h-[300px] md:h-[500px] bg-cover bg-center w-full"
+        className="relative h-[400px] md:h-[500px] w-full"
         style={{ 
           backgroundImage: `url('/lovable-uploads/0778ba5a-760d-40b1-985d-60832ff5daf5.png')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center 30%'
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-4 md:p-6">
@@ -43,6 +42,8 @@ const Index = () => {
               alt="Certifications" 
               className="max-w-full h-auto"
               loading="eager"
+              width="800"
+              height="400"
             />
           </div>
         </div>
