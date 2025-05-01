@@ -2,41 +2,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import OptimizedImage from "@/components/OptimizedImage";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const Index = () => {
-  const isMobile = useIsMobile();
-  
   return (
     <div className="flex flex-col">
       {/* Hero Banner Section - Improved mobile responsiveness */}
-      <div className="relative w-full overflow-hidden">
-        <AspectRatio ratio={isMobile ? 4/5 : 16/6} className="bg-gray-100">
-          <OptimizedImage
-            src="/lovable-uploads/0778ba5a-760d-40b1-985d-60832ff5daf5.png"
-            alt="Daman Packaging Banner"
-            className="w-full h-full object-cover"
-            loading="eager"
-            priority={true}
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-4 md:p-6">
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              Welcome to Daman Packaging
-            </h1>
-            <p className="text-lg md:text-2xl text-white mb-6 md:mb-8 max-w-2xl">
-              Manufacturer of Exclusively Virgin Quality HM-HDPE Jerry Cans & Open Top Drums
-            </p>
-            <div>
-              <Link to="/products">
-                <Button size="lg" className="bg-[#265186] hover:bg-[#256694]">
-                  View Our Products
-                </Button>
-              </Link>
-            </div>
+      <div 
+        className="relative h-[400px] md:h-[500px] w-full"
+        style={{ 
+          backgroundImage: `url('/lovable-uploads/0778ba5a-760d-40b1-985d-60832ff5daf5.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 30%'
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center p-4 md:p-6">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            Welcome to Daman Packaging
+          </h1>
+          <p className="text-lg md:text-2xl text-white mb-6 md:mb-8 max-w-2xl">
+            Manufacturer of Exclusively Virgin Quality HM-HDPE Jerry Cans & Open Top Drums
+          </p>
+          <div>
+            <Link to="/products">
+              <Button size="lg" className="bg-[#265186] hover:bg-[#256694]">
+                View Our Products
+              </Button>
+            </Link>
           </div>
-        </AspectRatio>
+        </div>
       </div>
 
       {/* Certifications Section */}
@@ -44,14 +37,13 @@ const Index = () => {
         <div className="container mx-auto text-center">
           <h2 className="text-2xl font-bold mb-6">Our Certifications</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <OptimizedImage 
+            <img 
               src="/lovable-uploads/7f88d094-07c6-455c-b591-c2b83eca3406.png" 
               alt="Certifications" 
               className="max-w-full h-auto"
               loading="eager"
-              priority={true}
-              width={800}
-              height={400}
+              width="800"
+              height="400"
             />
           </div>
         </div>
