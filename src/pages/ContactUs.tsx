@@ -1,18 +1,64 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import ContactInfo from '../components/ContactInfo';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import GetQuoteButton from '../components/GetQuoteButton';
+import { toast } from '../components/ui/sonner';
+import { supabase } from '../integrations/supabase/client';
 
 const ContactUs: React.FC = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted');
-    alert('Thank you for your message. We will get back to you shortly.');
+    setIsSubmitting(true);
+
+    try {
+      const { error, data } = await supabase.functions.invoke('send-contact-email', {
+        body: formData
+      });
+
+      if (error) {
+        throw new Error(error.message);
+      }
+
+      toast.success("Message sent successfully!", {
+        description: "We'll get back to you as soon as possible.",
+        duration: 5000,
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error("Failed to send message", {
+        description: "Please try again or contact us directly.",
+        duration: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -31,31 +77,65 @@ const ContactUs: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <label htmlFor="name" className="font-medium">Name</label>
-                <Input id="name" placeholder="Your name" required />
+                <Input 
+                  id="name" 
+                  placeholder="Your name" 
+                  required 
+                  value={formData.name}
+                  onChange={handleChange}
+                />
               </div>
               <div className="space-y-2">
                 <label htmlFor="email" className="font-medium">Email</label>
-                <Input id="email" type="email" placeholder="Your email" required />
+                <Input 
+                  id="email" 
+                  type="email" 
+                  placeholder="Your email" 
+                  required 
+                  value={formData.email}
+                  onChange={handleChange}
+                />
               </div>
             </div>
             
             <div className="space-y-2">
               <label htmlFor="phone" className="font-medium">Phone Number</label>
-              <Input id="phone" type="tel" placeholder="Your phone number" />
+              <Input 
+                id="phone" 
+                type="tel" 
+                placeholder="Your phone number" 
+                value={formData.phone}
+                onChange={handleChange}
+              />
             </div>
             
             <div className="space-y-2">
               <label htmlFor="subject" className="font-medium">Subject</label>
-              <Input id="subject" placeholder="Message subject" required />
+              <Input 
+                id="subject" 
+                placeholder="Message subject" 
+                required 
+                value={formData.subject}
+                onChange={handleChange}
+              />
             </div>
             
             <div className="space-y-2">
               <label htmlFor="message" className="font-medium">Message</label>
-              <Textarea id="message" placeholder="Your message" rows={5} required />
+              <Textarea 
+                id="message" 
+                placeholder="Your message" 
+                rows={5} 
+                required 
+                value={formData.message}
+                onChange={handleChange}
+              />
             </div>
             
             <div className="flex space-x-4">
-              <Button type="submit">Send Message</Button>
+              <Button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </Button>
               <GetQuoteButton variant="outline" />
             </div>
           </form>
