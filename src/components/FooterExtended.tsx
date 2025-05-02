@@ -15,6 +15,13 @@ const FooterExtended: React.FC = () => {
     window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
   };
 
+  const handleBrochureDownload = () => {
+    // Create a direct link to the brochure PDF
+    const brochureLink = '/brochure.pdf';
+    // Open the PDF in a new tab
+    window.open(brochureLink, '_blank');
+  };
+
   return (
     <footer className="bg-gray-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-4 md:px-6">
@@ -29,11 +36,14 @@ const FooterExtended: React.FC = () => {
             </p>
             <div className="flex flex-col gap-2">
               <GetQuoteButton className="mt-2" />
-              <Link to="/downloads/brochure.pdf" target="_blank" download>
-                <Button variant="outline" size="sm" className="flex items-center text-black">
-                  <Download size={16} className="mr-2" /> Download Brochure
-                </Button>
-              </Link>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="flex items-center text-black"
+                onClick={handleBrochureDownload}
+              >
+                <Download size={16} className="mr-2" /> Download Brochure
+              </Button>
             </div>
           </div>
           

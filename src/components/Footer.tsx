@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Download, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,6 +9,13 @@ const Footer = () => {
     const address = "Daman Packaging, SHED NO.2, PLOT NO. 50, GOVERNMENT INDUSTRIAL ESTATE, MASAT, SILVASSA";
     const encodedAddress = encodeURIComponent(address);
     window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
+  };
+  
+  const handleBrochureDownload = () => {
+    // Create a direct link to the brochure PDF
+    const brochureLink = '/brochure.pdf';
+    // Open the PDF in a new tab
+    window.open(brochureLink, '_blank');
   };
   
   return (
@@ -29,11 +35,14 @@ const Footer = () => {
               Manufacturer of Exclusively Virgin Quality HM-HDPE Jerry Cans & Open Top Drums
             </p>
             <div className="mt-4">
-              <Link to="/downloads/brochure.pdf" target="_blank" download>
-                <Button variant="outline" size="sm" className="flex items-center text-black">
-                  <Download size={16} className="mr-2" /> Download Brochure
-                </Button>
-              </Link>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="flex items-center text-black"
+                onClick={handleBrochureDownload}
+              >
+                <Download size={16} className="mr-2" /> Download Brochure
+              </Button>
             </div>
           </div>
 
