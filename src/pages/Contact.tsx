@@ -1,10 +1,5 @@
 
 import React from "react";
-import ContactInfo from "../components/ContactInfo";
-import { Button } from "../components/ui/button";
-import { Label } from "../components/ui/label";
-import { Input } from "../components/ui/input";
-import Map from "../components/Map";
 
 const Contact = () => {
   return (
@@ -14,49 +9,47 @@ const Contact = () => {
       <div className="flex flex-col md:flex-row gap-10">
         <div className="w-full md:w-1/2 bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
-          
-          <div className="mb-8">
-            <ContactInfo iconSize={18} className="mb-8" />
-          </div>
-          
           <form className="space-y-4">
             <div>
-              <Label htmlFor="name" className="block text-gray-700 mb-2">
+              <label htmlFor="name" className="block text-gray-700 mb-2">
                 Name
-              </Label>
-              <Input
+              </label>
+              <input
                 type="text"
                 id="name"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Your Name"
               />
             </div>
             
             <div>
-              <Label htmlFor="email" className="block text-gray-700 mb-2">
+              <label htmlFor="email" className="block text-gray-700 mb-2">
                 Email
-              </Label>
-              <Input
+              </label>
+              <input
                 type="email"
                 id="email"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Your Email"
               />
             </div>
             
             <div>
-              <Label htmlFor="phone" className="block text-gray-700 mb-2">
+              <label htmlFor="phone" className="block text-gray-700 mb-2">
                 Phone Number
-              </Label>
-              <Input
+              </label>
+              <input
                 type="tel"
                 id="phone"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Your Phone Number"
               />
             </div>
             
             <div>
-              <Label htmlFor="message" className="block text-gray-700 mb-2">
+              <label htmlFor="message" className="block text-gray-700 mb-2">
                 Message
-              </Label>
+              </label>
               <textarea
                 id="message"
                 rows={5}
@@ -65,12 +58,12 @@ const Contact = () => {
               ></textarea>
             </div>
             
-            <Button
+            <button
               type="submit"
               className="px-6 py-3 bg-black text-white font-medium rounded-md hover:bg-gray-800 transition-colors"
             >
               Send Message
-            </Button>
+            </button>
           </form>
         </div>
         
@@ -80,28 +73,37 @@ const Contact = () => {
             <div className="space-y-3">
               <p className="flex items-start">
                 <span className="font-bold text-gray-800 w-24">Address:</span>
-                <span className="text-gray-600">SHED NO.2, PLOT NO. 50, GOVERNMENT INDUSTRIAL ESTATE, MASAT, SILVASSA, Masat Industrial Area, 
-                Dadra And Nagar Haveli, Dadra and Nagar Haveli and Daman and Diu - 396230</span>
+                <span className="text-gray-600">123 Industrial Zone, City, State, Country</span>
               </p>
               <p className="flex items-start">
                 <span className="font-bold text-gray-800 w-24">Phone:</span>
-                <span className="text-gray-600">+91 94268 77849</span>
+                <span className="text-gray-600">+123 456 7890</span>
               </p>
               <p className="flex items-start">
                 <span className="font-bold text-gray-800 w-24">Email:</span>
-                <span className="text-gray-600">info@damanpackaging.com, sales1@damanpackaging.com</span>
+                <span className="text-gray-600">info@damanpackaging.com</span>
               </p>
               <p className="flex items-start">
-                <span className="font-bold text-gray-800 w-24">GSTIN:</span>
-                <span className="text-gray-600">26ADBPC8417F1ZX</span>
+                <span className="font-bold text-gray-800 w-24">Hours:</span>
+                <span className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</span>
               </p>
             </div>
           </div>
           
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-4">Our Location</h2>
-            <div className="h-[400px] bg-gray-200 rounded-lg overflow-hidden">
-              <Map />
+            <div className="aspect-video bg-gray-200">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.5308233662226!2d72.8425!3d19.1175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzAzLjAiTiA3MsKwNTAnMzMuMCJF!5e0!3m2!1sen!2sin!4v1651234567890!5m2!1sen!2sin" 
+                width="100%" 
+                height="300" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-md"
+                title="Daman Packaging Location"
+              ></iframe>
             </div>
           </div>
         </div>
