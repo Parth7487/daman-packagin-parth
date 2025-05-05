@@ -8,6 +8,8 @@ import { Textarea } from '../components/ui/textarea';
 import GetQuoteButton from '../components/GetQuoteButton';
 import { toast } from '../components/ui/sonner';
 import { supabase } from '../integrations/supabase/client';
+import { MapPin } from "lucide-react";
+import Map from '../components/Map';
 
 const ContactUs: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -139,11 +141,16 @@ const ContactUs: React.FC = () => {
               <GetQuoteButton variant="outline" />
             </div>
           </form>
+          
+          <div className="mt-8">
+            <ContactInfo />
+          </div>
         </div>
         
         <div className="space-y-8">
           <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-            <ContactInfo />
+            <h3 className="text-xl font-bold mb-4">Our Location</h3>
+            <Map />
           </div>
         </div>
       </div>

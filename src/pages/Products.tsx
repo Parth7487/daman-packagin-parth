@@ -55,38 +55,6 @@ const Products = () => {
 
   const narrowMouthDrums = [
     {
-      title: "5 Ltrs. Jerry Cans",
-      mainImage: {
-        src: "/lovable-uploads/acdc62a1-f133-4feb-b450-7d8a9fd244a2.png",
-        alt: "5 Ltrs Jerry Can"
-      },
-      detailImage: {
-        src: "/lovable-uploads/19b2c325-0b0a-43bf-bb40-96c489905682.png",
-        alt: "5 Ltrs Jerry Can Detailed Views"
-      },
-      specs: [
-        { label: "Useable Capacity (LTR.)", value: "5" },
-        { label: "Height (mm)", value: "280" },
-        { label: "Length (mm)", value: "150" },
-        { label: "Width (mm)", value: "180" },
-        { label: "Weight Range (gms)", value: "180 / 320" },
-      ],
-    },
-    {
-      title: "10 Ltrs. Stackable Jerry Cans",
-      mainImage: {
-        src: "/lovable-uploads/b0bceadd-9fd1-4448-8568-244444884b51.png",
-        alt: "10 Ltrs Stackable Jerry Can"
-      },
-      specs: [
-        { label: "Useable Capacity (LTR.)", value: "10" },
-        { label: "Height (mm)", value: "340" },
-        { label: "Length (mm)", value: "175" },
-        { label: "Width (mm)", value: "275" },
-        { label: "Weight Range (gms)", value: "500 / 750" },
-      ],
-    },
-    {
       title: "JERRYCAN 30",
       image: "/lovable-uploads/77293471-1fed-4935-b804-430c89986cbb.png",
       specs: [
@@ -282,21 +250,10 @@ const Products = () => {
       <div id="narrow-mouth-drum" className="mb-12 pt-6">
         <h2 className="text-2xl font-bold mb-6 text-blue-800 border-b pb-2">NARROW MOUTH DRUM</h2>
         <div className="space-y-8">
-          {/* First two products use ProductDetail component for image switching */}
-          {narrowMouthDrums.slice(0, 2).map((product, index) => (
-            <ProductDetail
-              key={index}
-              title={product.title}
-              mainImage={product.mainImage}
-              detailImage={product.detailImage}
-              specs={product.specs}
-            />
-          ))}
-          
-          {/* Rest of the products use regular Product component */}
-          {narrowMouthDrums.slice(2).map((product, index) => (
+          {/* Use regular Product component for all products */}
+          {narrowMouthDrums.map((product, index) => (
             <Product
-              key={index + 2}
+              key={index}
               title={product.title}
               image={product.image}
               specs={product.specs}
