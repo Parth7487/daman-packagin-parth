@@ -71,7 +71,7 @@ const ContactUs: React.FC = () => {
       
       <div className="grid md:grid-cols-2 gap-12">
         <div>
-          <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
+          <h2 className="text-2xl font-bold mb-6">Contact Us</h2>
           
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

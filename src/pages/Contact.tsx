@@ -8,7 +8,7 @@ const Contact = () => {
       
       <div className="flex flex-col md:flex-row gap-10">
         <div className="w-full md:w-1/2 bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
+          <h2 className="text-2xl font-bold mb-6">Contact Us</h2>
           <form className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-gray-700 mb-2">
