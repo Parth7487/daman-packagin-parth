@@ -1,9 +1,6 @@
-
 import React from "react";
-
 const Contact = () => {
-  return (
-    <div className="container mx-auto py-8 px-4">
+  return <div className="container mx-auto py-8 px-4">
       <h1 className="text-3xl font-bold text-center mb-8">Contact Us</h1>
       
       <div className="flex flex-col md:flex-row gap-10">
@@ -14,102 +11,38 @@ const Contact = () => {
               <label htmlFor="name" className="block text-gray-700 mb-2">
                 Name
               </label>
-              <input
-                type="text"
-                id="name"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Your Name"
-              />
+              <input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Name" />
             </div>
             
             <div>
               <label htmlFor="email" className="block text-gray-700 mb-2">
                 Email
               </label>
-              <input
-                type="email"
-                id="email"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Your Email"
-              />
+              <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Email" />
             </div>
             
             <div>
               <label htmlFor="phone" className="block text-gray-700 mb-2">
                 Phone Number
               </label>
-              <input
-                type="tel"
-                id="phone"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Your Phone Number"
-              />
+              <input type="tel" id="phone" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Phone Number" />
             </div>
             
             <div>
               <label htmlFor="message" className="block text-gray-700 mb-2">
                 Message
               </label>
-              <textarea
-                id="message"
-                rows={5}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Your Message"
-              ></textarea>
+              <textarea id="message" rows={5} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Message"></textarea>
             </div>
             
-            <button
-              type="submit"
-              className="px-6 py-3 bg-black text-white font-medium rounded-md hover:bg-gray-800 transition-colors"
-            >
+            <button type="submit" className="px-6 py-3 bg-black text-white font-medium rounded-md hover:bg-gray-800 transition-colors">
               Send Message
             </button>
           </form>
         </div>
         
-        <div className="w-full md:w-1/2">
-          <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
-            <div className="space-y-3">
-              <p className="flex items-start">
-                <span className="font-bold text-gray-800 w-24">Address:</span>
-                <span className="text-gray-600">123 Industrial Zone, City, State, Country</span>
-              </p>
-              <p className="flex items-start">
-                <span className="font-bold text-gray-800 w-24">Phone:</span>
-                <span className="text-gray-600">+123 456 7890</span>
-              </p>
-              <p className="flex items-start">
-                <span className="font-bold text-gray-800 w-24">Email:</span>
-                <span className="text-gray-600">info@damanpackaging.com</span>
-              </p>
-              <p className="flex items-start">
-                <span className="font-bold text-gray-800 w-24">Hours:</span>
-                <span className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</span>
-              </p>
-            </div>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-4">Our Location</h2>
-            <div className="aspect-video bg-gray-200">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.5308233662226!2d72.8425!3d19.1175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzAzLjAiTiA3MsKwNTAnMzMuMCJF!5e0!3m2!1sen!2sin!4v1651234567890!5m2!1sen!2sin" 
-                width="100%" 
-                height="300" 
-                style={{ border: 0 }} 
-                allowFullScreen={true} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-md"
-                title="Daman Packaging Location"
-              ></iframe>
-            </div>
-          </div>
-        </div>
+        
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
