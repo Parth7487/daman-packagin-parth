@@ -19,6 +19,7 @@ import ContactUs from './pages/ContactUs';
 import HeaderUpdated from './components/HeaderUpdated';
 import FooterExtended from './components/FooterExtended';
 import { Toaster } from './components/ui/toaster';
+import { Toaster as SonnerToaster } from './components/ui/sonner';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
       </main>
       <FooterExtended />
       <Toaster />
+      <SonnerToaster />
     </>
   );
 }
