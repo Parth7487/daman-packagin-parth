@@ -41,7 +41,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Email to company (with reply-to set to sender's email)
     const companyEmailResponse = await resend.emails.send({
       from: "Daman Packaging <onboarding@resend.dev>",
-      to: ["info@damanpackaging.com", "sales1@damanpackaging.com", "parthpp1666@gmail.com"],
+      to: ["sales1@damanpackaging.com", "parthpp1666@gmail.com"],
       subject: `New Contact Form Message: ${subject}`,
       reply_to: email,
       html: `

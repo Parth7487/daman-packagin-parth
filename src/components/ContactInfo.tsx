@@ -40,8 +40,6 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ className = "", iconSize = 20
       <div className="flex items-center gap-3">
         <Mail size={iconSize} className="text-blue-700 flex-shrink-0" />
         <div>
-          <a href="mailto:info@damanpackaging.com" className="hover:underline">info@damanpackaging.com</a>
-          <br />
           <a href="mailto:sales1@damanpackaging.com" className="hover:underline">sales1@damanpackaging.com</a>
         </div>
       </div>

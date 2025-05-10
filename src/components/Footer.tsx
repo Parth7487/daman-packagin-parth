@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Download, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -88,7 +89,7 @@ const Footer = () => {
               <strong>Phone:</strong> +123 456 7890
             </p>
             <p className="text-gray-600 mb-2">
-              <strong>Email:</strong> info@damanpackaging.com
+              <strong>Email:</strong> sales1@damanpackaging.com
             </p>
           </div>
         </div>
